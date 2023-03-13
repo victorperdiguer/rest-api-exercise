@@ -4,6 +4,8 @@
 
 This is the documentation for the REST API about TV shows.
 
+![](https://ychef.files.bbci.co.uk/976x549/p02fc1jw.jpg)
+
 ---
 
 ## Instructions
