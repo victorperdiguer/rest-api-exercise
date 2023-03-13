@@ -20,6 +20,9 @@ Then, run:
 ```bash
 npm install
 ```
+
+> 💡 At this point, make sure `MONGO` is running on your local machine
+
 To start the project run:
 ```bash
 npm run start
