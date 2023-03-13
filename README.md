@@ -69,7 +69,15 @@ npm run dev
 3. Create a `shows.js` file in the folder /routes. Remember to import it on the `app.js`
 4. One by one, create the routes according to the endpoints shown above. Before moving to the next one, test it on Postman to make sure it works as expected.
 
-> 💡 Remember the HTTP Status codes on each one of the responses
+> 💡 Remember the HTTP Status codes on each one of the responses:
+
+| HTTP response status code | Meaning                   | 
+|---------------------------|---------------------------|
+| 200                       | OK - successful           |             
+| 201                       | Created success      |                           
+| 204                      | Resource updated successfully          | 
+| 404                       | Not found         |            
+| 500                       | Server error      |  
 
 
 
