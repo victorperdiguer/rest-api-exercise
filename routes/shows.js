@@ -16,10 +16,10 @@ router.get('/', async (req, res, next) => {
 // @desc    return show based on ID
 // @route   GET /shows/:showID
 // @access  Public
-router.get('/', async (req, res, next) => {
-    const {id} = req.params;
+router.get('/:showId', async (req, res, next) => {
+    const {showId} = req.params;
     try {
-        const show = await Show.findById(id);
+        const show = await Show.findById(showId);
         res.status(200).json(show);
     } catch (error) {
         next(error);
@@ -42,10 +42,10 @@ router.post('/', async (req, res, next) => {
 // @route   PUT /shows/:showId
 // @access  Public
 router.put('/:showId', async (req, res, next) => {
-    const {id} = req.params;
+    const {showId} = req.params;
     const {newShow} = req.body;
     try {
-        await Show.findByIdAndUpdate(id, newShow);
+        await Show.findByIdAndUpdate(showId, newShow);
     } catch (error) {
         next(error);
     }
@@ -55,9 +55,9 @@ router.put('/:showId', async (req, res, next) => {
 // @route   DELETE /shows/:showId
 // @access  Public
 router.delete('/:showId', async (req, res, next) => {
-    const {id} = req.params;
+    const {showId} = req.params;
     try {
-        const show = await Show.findByIdAndDelete(id);
+        const show = await Show.findByIdAndDelete(showId);
         res.status(204).json(show);
     } catch (error) {
         next(error);
